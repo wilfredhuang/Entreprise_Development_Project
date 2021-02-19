@@ -68,7 +68,10 @@ namespace EDP_Clinic
                 // Convert the row index stored in the CommandArgument
                 // property to an Integer.
                 int index = Convert.ToInt32(e.CommandArgument);
-
+                while (index > 5)
+                {
+                    index = index - 5;
+                }
                 GridViewRow selectedRow = gv_report.Rows[index - 1];
                 string id = selectedRow.Cells[0].Text;
 
